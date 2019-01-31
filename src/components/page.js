@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
-import Tabs from './tabs';
+import Tab from './tabs';
+
 class Page extends Component {
 
-	render(){
+	post = () => {
+		return this.props.tabs.map((tabs)=> {
+			return(
+				<Tab 
+					label={tabs.text} 
+					key={tabs.id}
+				/>				
+			);
+		});
+	}
+
+	render(){		
 		return(
 			<div className="menu">
-					<Tabs/>
+				{this.post()}
 			</div>
 		);
 	}	

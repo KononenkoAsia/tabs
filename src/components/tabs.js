@@ -4,6 +4,7 @@ const Tab = (props) => {
 	
 	return(
 		<div className="tab">
+			{props.label}
 		</div>	
 	);
 }
