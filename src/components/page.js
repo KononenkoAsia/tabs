@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tab from './tabs';
+import Content from './content';
 
 class Page extends Component {
 
@@ -31,8 +32,11 @@ class Page extends Component {
 
 	render(){		
 		return(
-			<div className="menu">
-				{this.post()}
+			<div>
+				<div className="menu">
+					{this.post()}
+				</div>
+				<Content id={this.state.id} content={this.props.content} />
 			</div>
 		);
 	}	
