@@ -6,12 +6,14 @@ const Page = (props) => {
 
 	const [id, setId] = useState(0);
 
+	const handleClick = clickedId => setId(clickedId);
+
 	const post = () => {
 		return props.tabs.map((tabs)=> {
 			return(
 				<Tab 
 					label={tabs.text} 
-					onClick={() => setId(id)}
+					onClick={()=>handleClick(tabs.id)}
 				/>		
 			);
 		});
