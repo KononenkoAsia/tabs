@@ -1,45 +1,30 @@
-import React, { Component } from 'react';
+import React, { useState} from 'react';
 import Tab from './tabs';
 import Content from './content';
 
-class Page extends Component {
+const Page = (props) => {
 
-	constructor(props) {
-		super(props);
-		this.state={
-			id: 0
-		}
-	}
+	const [id, setId] = useState(0);
 
-	handleClick(event) {
-		this.setState({
-			id:event
-		})
-	}
-
-	post = () => {
-		return this.props.tabs.map((tabs)=> {
+	const post = () => {
+		return props.tabs.map((tabs)=> {
 			return(
 				<Tab 
 					label={tabs.text} 
-					key={tabs.id}
-					onClick={() => this.handleClick(tabs.id)}
-					id = {this.state.id}
-				/>				
+					onClick={() => setId(id)}
+				/>		
 			);
 		});
 	}
 
-	render(){		
 		return(
 			<div>
 				<div className="menu">
-					{this.post()}
+					{post()}
 				</div>
-				<Content id={this.state.id} content={this.props.content} />
+				<Content id={id} content={props.content} />
 			</div>
-		);
-	}	
+		);	
 }
 
 export default Page;
