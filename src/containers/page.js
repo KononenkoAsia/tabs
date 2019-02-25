@@ -14,7 +14,8 @@ const Page = props => {
   return (
     <div>
       <div className='menu'>{menu()}</div>
-      <Content />
+      <Content currentId={props.active.id} />
+      {props.content}
     </div>
   )
 }
@@ -22,7 +23,6 @@ const Page = props => {
 const mapStateToProps = state => {
   return {
     tabs: state.tabs,
-    content: state.content,
     active: state.active
   }
 }
