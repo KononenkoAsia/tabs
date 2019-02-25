@@ -22,7 +22,8 @@ const Page = props => {
 const mapStateToProps = state => {
   return {
     tabs: state.tabs,
-    content: state.content
+    content: state.content,
+    active: state.active
   }
 }
 
