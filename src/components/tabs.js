@@ -1,12 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-const Tab = (props) => {
-	
-	return(
-		<div className="tab" onClick={props.onClick}>
-			{props.label}
-		</div>	
-	);
+const Tab = props => {
+  return <div className='tab'>{props.label}</div>
 }
 
-export default Tab;
+export default Tab

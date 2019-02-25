@@ -1,17 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-const Content = (props) => {
-
-	return props.content.filter((content) => {return content.id===props.id}).map((value) => {
-		return(
-			<div className="content" key={value.id}>
-				<p>
-					{value.text}
-				</p>
-			</div>
-		);		
-	});	
-		
+const Content = props => {
+  return (
+    <div className='content'>
+      <p>Content</p>
+    </div>
+  )
 }
 
-export default Content;
+export default Content
