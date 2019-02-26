@@ -1,12 +1,8 @@
 import { combineReducers } from 'redux'
-import content from './contentReducer'
-import tabs from './tabsReducer'
-import active from './activeTab'
+import activeTab from './activeTab'
 
 const reduser = combineReducers({
-  tabs,
-  content,
-  active
+  activeTab
 })
 
 export default reduser

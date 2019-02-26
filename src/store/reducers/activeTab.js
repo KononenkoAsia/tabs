@@ -1,4 +1,4 @@
-const active = (state = {}, action) => {
+const activeTab = (state = {}, action) => {
   switch (action.type) {
     case 'ACTIVE_TAB':
       return { id: action.id }
@@ -7,4 +7,4 @@ const active = (state = {}, action) => {
   }
 }
 
-export default active
+export default activeTab

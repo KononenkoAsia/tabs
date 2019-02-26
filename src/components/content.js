@@ -1,9 +1,9 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import content from '../data/dataContent.js'
 
 const Content = props => {
   const contentView = () => {
-    return props.content
+    return content
       .filter(value => {
         return value.id === props.currentId
       })
@@ -17,10 +17,5 @@ const Content = props => {
   }
   return <div className='content'>{contentView()}</div>
 }
-const mapStateToProps = state => {
-  return {
-    content: state.content
-  }
-}
 
-export default connect(mapStateToProps)(Content)
+export default Content
