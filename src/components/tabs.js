@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Tab = props => {
+const Tab = ({ onClick, label }) => {
   return (
-    <div className='tab' onClick={props.onClick}>
-      {props.label}
+    <div className='tab' onClick={onClick}>
+      {label}
     </div>
   )
 }

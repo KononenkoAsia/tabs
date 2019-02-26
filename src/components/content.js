@@ -1,11 +1,11 @@
 import React from 'react'
 import content from '../data/dataContent.js'
 
-const Content = props => {
+const Content = ({ currentId }) => {
   const contentView = () => {
     return content
       .filter(value => {
-        return value.id === props.currentId
+        return value.id === currentId
       })
       .map(value => {
         return (
