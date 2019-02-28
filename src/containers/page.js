@@ -4,6 +4,14 @@ import Tab from '../components/tabs'
 import Content from '../components/content'
 import { tabAction } from '../store/actions/activeTabAction'
 import tabs from '../data/dataTabs.js'
+import styled from 'styled-components'
+
+const Menu = styled.div`
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #eaebec;
+  box-sizing: border-box;
+`
 
 const Page = ({ tabActionСlick, content, active: { id: activeId } }) => {
   const menu = () => {
@@ -13,7 +21,7 @@ const Page = ({ tabActionСlick, content, active: { id: activeId } }) => {
   }
   return (
     <div>
-      <div className='menu'>{menu()}</div>
+      <Menu>{menu()}</Menu>
       <Content currentId={activeId} />
       {content}
     </div>
